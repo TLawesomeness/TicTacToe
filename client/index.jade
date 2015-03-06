@@ -9,30 +9,31 @@ html(lang='en')
       .row
         h1.text-center Tic Tac Toe
         .screen
-        span#p1 Player 1
+        h4#p1 Player 1
         input#p1box(type='text' placeholder='enter tag')
-        span#p2 Player 2
+        h4#p2 Player 2
         input#p2box(type='text' placeholder='enter tag')
+      .row    
         button#start(type='button') Go!
         
-    .container
       .gameMat
-        .row
-          table
-            tr#row1
-              td.sq1
-              td.sq2
-              td.sq3
-            tr#row2
-              td.sq4
-              td.sq5
-              td.sq6
-            tr#row3
-              td.sq7
-              td.sq8
-              td.sq9
-
-           
+        table#board
+          h4 Game On!
+          tr#row1
+            td#sq1.box
+            td#sq2.box
+            td#sq3.box
+          tr#row2
+            td#sq4.box
+            td#sq5.box
+            td#sq6.box
+          tr#row3
+            td#sq7.box
+            td#sq8.box
+            td#sq9.box
+      
+        #newbtn                
+          button#new(type='button') new game
     
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')
