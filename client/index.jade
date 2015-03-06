@@ -5,6 +5,34 @@ html(lang='en')
     title TicTacToe
     link(rel='stylesheet', href='/style.css')
   body
-    h1 Hello, World
+    .container
+      .row
+        h1.text-center Tic Tac Toe
+        .screen
+        span#p1 Player 1
+        input#p1box(type='text' placeholder='enter tag')
+        span#p2 Player 2
+        input#p2box(type='text' placeholder='enter tag')
+        button#start(type='button') Go!
+        
+    .container
+      .gameMat
+        .row
+          table
+            tr#row1
+              td.sq1
+              td.sq2
+              td.sq3
+            tr#row2
+              td.sq4
+              td.sq5
+              td.sq6
+            tr#row3
+              td.sq7
+              td.sq8
+              td.sq9
+
+           
+    
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')
