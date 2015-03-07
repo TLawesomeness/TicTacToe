@@ -20,20 +20,20 @@ html(lang='en')
         table#board
           h4 Game On!
           tr#row1
-            td.box(data-pos='1')
-            td.box(data-pos='2')
-            td.box(data-pos='3')
+            td#1.box(data-value='1')
+            td#2.box(data-value='2')
+            td#3.box(data-value='3')
           tr#row2
-            td.box(data-pos='4')
-            td.box(data-pos='5')
-            td.box(data-pos='6')
+            td#4.box(data-value='4')
+            td#5.box(data-value='5')
+            td#6.box(data-value='6')
           tr#row3
-            td.box(data-pos='7')
-            td.box(data-pos='8')
-            td.box(data-pos='9')
+            td#7.box(data-value='7')
+            td#8.box(data-value='8')
+            td#9.box(data-value='9')
       
         #newbtn                
-          button#new(type='button') new game
+          button#newgame(type='button') new game
     
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')
