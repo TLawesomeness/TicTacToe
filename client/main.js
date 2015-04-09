@@ -18,21 +18,18 @@ $(document).ready(function() {
     alert('It is player ' + turn + 's turn');
     $('#start').css('opacity', '0');
     $('.box').click(function() {
-      // debugger;
       $(this).html($('<h3>' + turn + '</h3>'));
 
       if (turn === $p1) {
         turn = $p2;
         checkWin($p1);
-        // $(this).prop('disabled', true);
-        console.log('P1: ' + $p1);
-        console.log('It is: ' + turn + ' turn');
+        // console.log('P1: ' + $p1);
+        // console.log('It is: ' + turn + ' turn');
       } else {
         turn = $p1;
         checkWin($p2);
-        // $(this).prop('disabled', true);
-        console.log('P1: ' + $p2);
-        console.log('It is: ' + turn + ' turn');
+        // console.log('P1: ' + $p2);
+        // console.log('It is: ' + turn + ' turn');
       }
       countTurn++;
 
