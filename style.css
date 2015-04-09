@@ -1,0 +1,49 @@
+h1 {
+  color: red;
+}
+.container {
+  text-align: center;
+}
+td {
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
+}
+td:hover {
+  border: 5px solid yellow;
+}
+.mat {
+  margin-top: 30px;
+}
+table {
+  background-color: #ccc;
+  text-align: center;
+}
+#board {
+  display: inline-block;
+}
+#start {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: yellow;
+  font-size: 16px;
+}
+#start:hover {
+  background-color: red;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
+#newgame {
+  margin-top: 20px;
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: orange;
+  font-weight: bold;
+}
+#newgame:hover {
+  background-color: pink;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.6);
+}
