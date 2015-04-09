@@ -14,12 +14,11 @@ html(lang='en')
         h4#p2 Player 2
         input#p2box(type='text' placeholder='P2')
       .row    
-        button#start Go!
+        button#start Start!
     
     .container    
       .gameMat
         table#board
-          h4#gameMsg Game On!
           tr#row1
             td#1.box(data-value='1')
             td#2.box(data-value='2')
@@ -34,7 +33,7 @@ html(lang='en')
             td#9.box(data-value='9')
       
         #newbtn                
-          button#newgame new game
+          button#newgame New Game
     
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')

@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function() {
-
+  $('#newgame').hide();
   $('#start').click(function() {
     var countTurn = 0;
     var $p1 = $('#p1box').val();
@@ -16,7 +16,7 @@ $(document).ready(function() {
     }
 
     alert('It is player ' + turn + 's turn');
-
+    $('#start').css('opacity', '0');
     $('.box').click(function() {
       // debugger;
       $(this).html($('<h3>' + turn + '</h3>'));
@@ -42,7 +42,7 @@ $(document).ready(function() {
           if ($('#board').find('#1').html() === $('#board').find('#2').html()) {
             if ($('#board').find('#1').html() === $('#3').html()) {
               alert(player + ' Won!');
-              console.log('top row win');
+              // console.log('top row win');
               gameReset();
             }
           }
@@ -52,7 +52,7 @@ $(document).ready(function() {
           if ($('#board').find('#4').html() === $('#board').find('#5').html()) {
             if ($('#board').find('#4').html() === $('#6').html()) {
               alert(player + ' Won!');
-              console.log('mid row win');
+              // console.log('mid row win');
               gameReset();
             }
           }
@@ -62,7 +62,7 @@ $(document).ready(function() {
           if ($('#board').find('#7').html() === $('#board').find('#8').html()) {
             if ($('#board').find('#7').html() === $('#9').html()) {
               alert(player + ' Won!');
-              console.log('bot row win');
+              // console.log('bot row win');
               gameReset();
             }
           }
@@ -72,7 +72,7 @@ $(document).ready(function() {
           if ($('#board').find('#1').html() === $('#board').find('#4').html()) {
             if ($('#board').find('#1').html() === $('#7').html()) {
               alert(player + ' Won!');
-              console.log('left col win');
+              // console.log('left col win');
               gameReset();
             }
           }
@@ -82,7 +82,7 @@ $(document).ready(function() {
           if ($('#board').find('#2').html() === $('#board').find('#5').html()) {
             if ($('#board').find('#2').html() === $('#8').html()) {
               alert(player + ' Won!');
-              console.log('mid col win');
+              // console.log('mid col win');
               gameReset();
             }
           }
@@ -92,7 +92,7 @@ $(document).ready(function() {
           if ($('#board').find('#3').html() === $('#board').find('#6').html()) {
             if ($('#board').find('#3').html() === $('#9').html()) {
               alert(player + ' Won!');
-              console.log('right col win');
+              // console.log('right col win');
               gameReset();
             }
           }
@@ -102,7 +102,7 @@ $(document).ready(function() {
           if ($('#board').find('#1').html() === $('#board').find('#5').html()) {
             if ($('#board').find('#1').html() === $('#9').html()) {
               alert(player + ' Won!');
-              console.log('left diag win');
+              // console.log('left diag win');
               gameReset();
             }
           }
@@ -112,7 +112,7 @@ $(document).ready(function() {
           if ($('#board').find('#3').html() === $('#board').find('#5').html()) {
             if ($('#board').find('#3').html() === $('#7').html()) {
               alert(player + ' Won!');
-              console.log('right diag win');
+              // console.log('right diag win');
               gameReset();
             }
           }
@@ -126,11 +126,13 @@ $(document).ready(function() {
     });
 
     $('#newgame').click(function() {
+      $('#newgame').hide();
       $('td').text('');
       countTurn = 0;
       $('#board').fadeIn(function() {
         $('#board').animate({opacity: 1}, 500);
         $('#start, #gameMsg').show();
+        $('#start').css('opacity', '1');
       });
     });
 
@@ -138,6 +140,9 @@ $(document).ready(function() {
       $('#board').fadeOut(function() {
         $('#board').animate({opacity: 0}, 500);
         $('#start, #gameMsg').hide();
+        $('#p1box').val('');
+        $('#p2box').val('');
+        $('#newgame').show();
       });
     }
   });
